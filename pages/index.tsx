@@ -63,6 +63,50 @@ const index = () => {
     );
   };
 
+  const faqData = [
+    {
+      question: 'What is MoMo Credit?',
+      answer:
+        'MoMo Credit is a loan app that allows you apply for a short term loan through the MoMo Credit app.',
+    },
+    {
+      question: 'Why should I use MoMo Credit app?',
+      answer:
+        'MoMo Credit gives you access to soft loan, business loan and education loan. With Momo Credit you are just a click away from accessing that urgent funds to finance your urgent needs.',
+    },
+    {
+      question: 'Is there interest or any charges on using the MoMo Credit loan?',
+      answer:
+        'MoMo Credit loan is an interest free loan, but there is a service fee charge for the usage of the platform.',
+    },
+    {
+      question: 'Who can apply for loan on MoMo Credit app?',
+      answer:
+        'Only salary earners with proof of their monthly salaries can apply for loans on MoMo Credit app. MoMo Credit is strictly for salary earners',
+    },
+    {
+      question: 'Who can stand as a guarantor?',
+      answer:
+        'A guarantor must be a salary earner.',
+    },
+    {
+      question: 'How much can I apply as a first time customer?',
+      answer:
+        'First time customers can apply for a loan from N10,000 to N50,000',
+    },
+    
+  ];
+
+  const [activeIndex, setActiveIndex] = useState(-1);
+
+    const toggleAccordion = (index: number) => {
+      if (activeIndex === index) {
+        setActiveIndex(-1);
+      } else {
+        setActiveIndex(index);
+      }
+    };
+
   return (
     <div className={styles.body} >
       <div>
@@ -73,10 +117,17 @@ const index = () => {
         <div className={styles.secondsection}>
           <div className={styles.herotexts}>
             <div className={styles.textbody}>
-            <h3>Super Charge Your Sales With Pashione</h3>
+              <div className={styles.toptexts}>
+              <div className={styles.sidetext}>
+              <h3><span className={styles.primarytext}>Supercharge </span><span className={styles.semitext}>Your Sales With</span>  <span className={styles.secondary}>Pashione</span></h3>
+              </div>
+            <div className={styles.subtexts}>
             <p>Reach More Customers, Expand Your Business.</p>
+            </div>
+            </div>
+            
             <div>
-            <div className={styles.navbuttons}>
+            <div className={styles.herobuttons}>
             <div><button className={styles.getstartedbutton}>Get Started</button></div>
           <div><button className={styles.loginbutton}>Login</button></div>
           
@@ -92,11 +143,16 @@ const index = () => {
       <main>
         <div className={styles.challenges}>
           <div className={styles.innerbox}>
-            <div>
-            <h3 className={styles.innerboxheader}>Overcome Selling Challenges, Unleash Your Potential.</h3>
-            <p className={styles.innerboxtexts}>Are you struggling to reach a wider customer base and boost your sales? Do you find it challenging to navigate the complex world of e-commerce? We understand your pain points and are here to help.</p>
+            <div className={styles.headertext}>
+                <div>
+                  <div className={styles.headerwidth}>
+                    <h3 className={styles.innerboxheader}>Overcome Selling Challenges, Unleash Your Potential.</h3>
+                  </div>
+                  <div className={styles.textwidth}>
+                    <p className={styles.innerboxtexts}>Are you struggling to reach a wider customer base and boost your sales? Do you find it challenging to navigate the complex world of e-commerce? We understand your pain points and are here to help.</p>
+                  </div>    
+                </div>
             </div>
-  
           </div>
         </div>
       </main>
@@ -110,7 +166,7 @@ const index = () => {
             </div>
           </div>
           <div>
-            <Image src='/ecommerce.png' width={500} height={500} alt='ecommerce pic' />
+            <Image src='/ecommerce.png' width={500} height={500} alt='ecommerce pic' className={styles.solutionimg}/>
           </div>
         </div>
       </main>
@@ -228,6 +284,48 @@ const index = () => {
         &gt;
       </button>
     </div>
+        </div>
+      </main>
+      {/* FREQUENTLY ASKED QUESTIONS */}
+      <main>
+      <div className={styles.fiveheader}>
+          <h3 className={styles.innerecommerce}>Frequently Asked Questions</h3>
+          </div>
+          <div className={styles.faqcontainer}>
+      {faqData.map((faq, index) => (
+        <div key={index} className={styles.faq}>
+          <div className={styles.questions}>
+            <p className={styles.question}>{faq.question}</p>
+            <div className={styles.togglefaq} onClick={() => toggleAccordion(index)}>
+              <p>{activeIndex === index ? '-' : '+'}</p>
+            </div>
+          </div>
+          {activeIndex === index && (
+            <div className={styles.answerbody}>
+              <p className={styles.answer}>{faq.answer}</p>
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+          
+      </main>
+      {/* BANNER */}
+      <main className={styles.bannercontainer}>
+        <div className={styles.banner}>
+          {/* LEFT SIDE */}
+          <div className={styles.bannerleft}>
+            <div className={styles.bannerheader}>
+              <h3>Start Growing Your Business Today</h3>
+            </div>
+            <div className={styles.bannertexts}>
+              <p>Join Pashione and take your business to new heights. Embrace the opportunities, tap into our resources, and become a part of our vibrant community of successful sellers.</p>
+            </div>
+            <button className={styles.bannerbutton}>Get Started</button>
+          </div>
+          <div >
+            <Image src='/banner.png' width={500} height={500} alt='banner' className={styles.bannerimg} />
+          </div>
         </div>
       </main>
       {/* Footer Section */}

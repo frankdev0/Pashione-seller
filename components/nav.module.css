@@ -40,6 +40,14 @@
     gap: 10px;
 }
 
+.herobuttons{
+  display: flex;
+  gap: 10px;
+  margin-top: 4.5rem;
+  width: 498px;
+  height: 56px;
+}
+
 .textbody{
     /* width: 498px;
     padding-left: 100px; */
@@ -49,12 +57,44 @@
 .herotexts{
     display: flex;
     align-items: center;
-  margin: auto;
+    margin: auto;
+}
+
+.secondary{
+color: #991D0E;
+}
+.semitext{
+color: #555555;
+}
+.primarytext{
+color: #333333;
+}
+
+.subtexts{
+  margin-top: 4rem;
+  font-size: 24px;
+  font-weight: 400;
+  width: 455px;
+  height: 72px;
+  line-height: 36px;
+}
+
+.toptexts{
+  width: 498px;
+  height: 220px;
+}
+
+.sidetext{
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 69.84px;
+  width: 498px;
+  height: 140px;
 }
 
 .imageWidth{
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
     height: 874px;
 }
 
@@ -72,7 +112,7 @@
 
   .challenges{
     width: 100%;
-    height: 400px;
+    height: 340px;
     background-color: #991D0E;
     display: flex;
     justify-content: center;
@@ -81,33 +121,49 @@
 
   .innerbox{
     display: flex;
-    justify-content: center;
+  
+    margin: auto;
     text-align: center;
     align-items: center;
     background-color: #FFF9F7;
-    height: 130px;
+    height: 100px;
     width: 80%;
     border-radius: 40px;
-    padding: 70px 0px;
-    gap: 16px;
+    padding: 70px 70px;
+ 
   }
 
   .innerboxheader{
-    font-weight: 600;
-    font-size: 36px;
+    font-weight: 700;
+    font-size: 30px;
     line-height: 52.38px;
-    height: 52px;
-    width: 1009px;
     color: #991D0E;
+  }
+
+  .headerwidth {
+    width: 1009px;
+    height: 52px;
+    margin: auto;
   }
 
   .innerboxtexts{
     font-weight: 500;
     font-size: 18px;
     line-height: 27px;
-    height: 81px;
-    width: 860px;
     color: #555555;
+  }
+
+  .textwidth{
+    width: 860px;
+    height: 81px;
+    margin: auto;
+  }
+
+  .headertext{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
 
   .thirdsection{
@@ -148,25 +204,26 @@
     height: 104px;
     margin: auto;
     text-align: center;
+    margin-bottom: 2rem;
   }
 
   .comparism{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 1140px;
-    height: 102px;
+    width: 1000px;
+    height: 50px;
     border-radius: 12px;
     padding: 24px;
     gap: 10px;
-    background-color: #FFF9F7;
+    background-color: #f7ece9;
     margin: auto;
     margin-bottom: 20px;
   }
 
   .item{
-    font-weight: 500;
-    font-size: 20px;
+    font-weight: 600;
+    font-size: 0.95rem;
     line-height: 30px;
     color: #991D0E;
     width: 541px;
@@ -175,7 +232,7 @@
 
   .description{
     font-weight: 400;
-    font-size: 18px;
+    font-size: 0.95rem;
     line-height: 27px;
     color: #555555;
     width: 541px;
@@ -203,7 +260,11 @@
     border-radius: 40px;
     width: 1304px;
     height: 834px;
-    object-fit: cover;
+    object-fit: contain;
+  }
+  
+  .solutionimg{
+    object-fit: contain;
   }
 
   .socialicons{
@@ -226,7 +287,7 @@
 
   .submenuheading{
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
     color: #991D0E;
   }
 
@@ -237,7 +298,7 @@
   }
 
   .mainfooter{
-    background-color: #FFF9F7;
+    background-color: #f7ece9;
   }
 
   .footerlogo{
@@ -343,4 +404,92 @@
 
 .arrow:last-child {
   right: 10px;
+}
+
+.faqcontainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem; /* Add desired margin between each FAQ item */
+  margin-bottom: 4rem;
+}
+
+.faq {
+  width: 900px;
+  border-radius: 16px;
+  padding: 10px 40px;
+  background-color: #f7ece9;
+}
+
+.questions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.togglefaq{
+  cursor: pointer;
+}
+
+.question{
+  font-size: 0.85rem;
+}
+
+
+.answer {
+  margin: 0;
+}
+
+.bannercontainer{
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0rem;
+}
+
+.banner{
+  display: flex;
+  width: 1304px;
+  height: 495px;
+  border-radius: 24px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #991D0E;
+}
+
+.bannerleft{
+  padding: 70px 70px 0px 70px;
+}
+
+.bannerimg{
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+  
+}
+
+.bannerbutton{
+  font-weight: 600;
+  /* font-family: poppins; */
+  color: #FFFFFF;
+  background-color: #991D0E;
+  border-radius: 12px;
+  border: 1px solid #FFFFFF;
+  Padding: 16px 48px 16px 48px;
+}
+
+.bannerheader{
+  width: 420px;
+  height: 104px;
+  font-weight: 500;
+  font-size: 36px;
+  color: #FFFFFF;
+}
+
+.bannertexts{
+  width: 420px;
+  height: 108px;
+  font-weight: 400;
+  font-size: 18px;
+  color: #FFFFFF;
+  margin: 2rem 0rem;
 }
